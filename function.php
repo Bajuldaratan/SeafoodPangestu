@@ -399,7 +399,7 @@ function tambah_data_pesanan()
 
         mysqli_query($koneksi, "INSERT INTO pesanan (kode_pesanan, kode_menu, qty)
 
-                                VALUES ('$kode_pesanan', '$kode_menu', $qty);
+                                VALUES ('$kode_pesanan', '$kode_menu', $qty)
 
         ");
     }
