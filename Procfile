@@ -1,1 +1,1 @@
-web: php -S 0.0.0.0:$PORT
+web: docker run -p $PORT:8080 .
