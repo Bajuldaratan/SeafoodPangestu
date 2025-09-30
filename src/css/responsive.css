@@ -1,0 +1,286 @@
+/* ===== SEAFOOD PANGESTU RESPONSIVE CSS ===== */
+/* Mobile-First Responsive Design */
+
+/* Base Mobile Styles (320px+) */
+@media (max-width: 575.98px) {
+    /* Header Mobile */
+    .header-mobile {
+        padding: 10px 15px !important;
+        flex-direction: row !important;
+        gap: 10px;
+    }
+    
+    .header-mobile h2 {
+        font-size: 16px !important;
+        text-align: left;
+    }
+    
+    .header-mobile .btn {
+        font-size: 12px !important;
+        padding: 6px 12px !important;
+    }
+    
+    /* Fix container margins */
+    .container-fluid {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    
+    /* Table responsive */
+    .table-responsive {
+        border: 2px solid #000 !important;
+        border-radius: 0 !important;
+    }
+    
+    .table {
+        font-size: 12px !important;
+        margin-bottom: 0 !important;
+    }
+    
+    .table th {
+        background: #28A745 !important;
+        color: white !important;
+        border: 1px solid #000 !important;
+        padding: 8px 4px !important;
+        font-size: 11px !important;
+    }
+    
+    .table td {
+        border: 1px solid #666 !important;
+        padding: 6px 4px !important;
+        font-size: 11px !important;
+        word-break: break-word;
+    }
+    
+    /* Hamburger Menu Mobile */
+    .hamburger-mobile {
+        font-size: 16px !important;
+        padding: 8px !important;
+    }
+    
+    /* Sidebar Mobile */
+    .sidebar-mobile {
+        width: 100% !important;
+        top: 120px !important;
+        left: 0 !important;
+        height: calc(100vh - 120px) !important;
+        z-index: 9999 !important;
+    }
+    
+    .sidebar-mobile .btn {
+        font-size: 14px !important;
+        padding: 15px !important;
+        margin-bottom: 10px;
+    }
+    
+    /* Content Mobile */
+    .content-mobile {
+        margin-top: 120px !important;
+        padding: 10px !important;
+    }
+    
+    /* Search & Filter Mobile */
+    .search-mobile {
+        flex-direction: column !important;
+        gap: 15px;
+    }
+    
+    .search-mobile .form-control {
+        font-size: 14px !important;
+        padding: 12px !important;
+    }
+    
+    .search-mobile .btn {
+        width: 100% !important;
+        font-size: 14px !important;
+        padding: 12px !important;
+    }
+    
+    .filter-mobile select {
+        font-size: 14px !important;
+        padding: 12px !important;
+    }
+    
+    /* Menu Cards Mobile */
+    .menu-card-mobile {
+        margin-bottom: 20px !important;
+        border: 2px solid #000 !important;
+        box-shadow: 3px 3px 0px #666 !important;
+    }
+    
+    .menu-card-mobile img {
+        max-height: 120px !important;
+    }
+    
+    .menu-card-mobile .btn {
+        font-size: 12px !important;
+        padding: 8px 12px !important;
+    }
+    
+    /* Form Mobile */
+    .form-mobile .form-control {
+        font-size: 14px !important;
+        padding: 12px !important;
+        border: 2px solid #000 !important;
+    }
+    
+    .form-mobile .btn {
+        font-size: 14px !important;
+        padding: 12px 20px !important;
+    }
+    
+    /* Login Mobile */
+    .login-mobile {
+        padding: 15px !important;
+        border: 3px solid #000 !important;
+        box-shadow: 4px 4px 0px #666 !important;
+    }
+    
+    .login-mobile h1 {
+        font-size: 28px !important;
+    }
+    
+    .login-mobile h2 {
+        font-size: 18px !important;
+    }
+}
+
+/* Tablet Portrait (576px - 767.98px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .header-tablet h2 {
+        font-size: 20px !important;
+    }
+    
+    .sidebar-tablet {
+        width: 280px !important;
+    }
+    
+    .content-tablet {
+        margin-top: 100px !important;
+        padding: 15px !important;
+    }
+    
+    .menu-card-tablet {
+        border: 3px solid #000 !important;
+        box-shadow: 4px 4px 0px #666 !important;
+    }
+    
+    .search-tablet .form-control {
+        font-size: 15px !important;
+    }
+}
+
+/* Tablet Landscape (768px - 991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .header-tablet-lg h2 {
+        font-size: 22px !important;
+    }
+    
+    .content-tablet-lg {
+        margin-top: 90px !important;
+        padding: 20px !important;
+    }
+    
+    .menu-card-tablet-lg img {
+        max-height: 140px !important;
+    }
+}
+
+/* Desktop Small (992px - 1199.98px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .header-desktop h2 {
+        font-size: 24px !important;
+    }
+    
+    .content-desktop {
+        margin-top: 90px !important;
+        padding: 20px !important;
+    }
+}
+
+/* Desktop Large (1200px+) */
+@media (min-width: 1200px) {
+    .content-desktop-lg {
+        margin-top: 90px !important;
+        padding: 25px !important;
+    }
+    
+    .menu-card-desktop-lg {
+        border: 4px solid #000 !important;
+        box-shadow: 6px 6px 0px #666 !important;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (pointer: coarse) {
+    .btn, .form-control, select, input {
+        min-height: 44px !important; /* iOS/Android touch target */
+    }
+    
+    .btn {
+        padding: 12px 20px !important;
+        font-size: 16px !important; /* Prevent zoom on iOS */
+    }
+    
+    .form-control, select, input {
+        font-size: 16px !important; /* Prevent zoom on iOS */
+        padding: 12px 16px !important;
+    }
+}
+
+/* Landscape Mobile Orientation */
+@media (max-height: 500px) and (orientation: landscape) {
+    .sidebar-landscape {
+        height: 100vh !important;
+        overflow-y: auto !important;
+    }
+    
+    .content-landscape {
+        margin-top: 80px !important;
+    }
+}
+
+/* High DPI / Retina Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .menu-card img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .dark-mode-support {
+        background: #1a1a1a !important;
+        color: #ffffff !important;
+    }
+    
+    .dark-mode-support .form-control {
+        background: #2d2d2d !important;
+        color: #ffffff !important;
+        border-color: #555 !important;
+    }
+}
+
+/* Reduced Motion for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    .print-friendly {
+        background: white !important;
+        color: black !important;
+        box-shadow: none !important;
+        border: 1px solid #000 !important;
+    }
+}

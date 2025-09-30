@@ -1,0 +1,11 @@
+{
+  "name": "seafood-pangestu/kasir-restoran",
+  "description": "Sistem Kasir Restoran Seafood Pangestu dengan Neo-Brutalism UI",
+  "type": "project",
+  "require": {
+    "php": "^8.0"
+  },
+  "scripts": {
+    "start": "php -S 0.0.0.0:8000 -t ."
+  }
+}
