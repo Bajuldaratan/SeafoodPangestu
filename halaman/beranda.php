@@ -147,7 +147,7 @@
                     <!-- Status -->
                     <div class="mb-3">
                         <div class="p-2 text-center" style="background: #D4EDDA; border: 2px solid #000;">
-                            <span class="fw-bold">STATUS: <?= strtoupper($m["status"]); ?></span>
+                            <span class="fw-bold">✅ TERSEDIA</span>
                         </div>
                     </div>
                     

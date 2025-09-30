@@ -45,8 +45,7 @@ if (isset($_GET["transaksi"])) {
         $key_search = $_GET["key-search"];
         $where_conditions[] = "(nama LIKE '%$key_search%' OR 
                                harga LIKE '%$key_search%' OR 
-                               kategori LIKE '%$key_search%' OR 
-                               `status` LIKE '%$key_search%')";
+                               kategori LIKE '%$key_search%')";
     }
     
     // Gabungkan kondisi WHERE

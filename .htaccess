@@ -1,0 +1,17 @@
+RewriteEngine On
+
+# Allow access to static files
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Enable MIME types
+AddType text/css .css
+AddType application/javascript .js
+AddType image/jpeg .jpg .jpeg
+AddType image/png .png
+AddType image/gif .gif
+AddType image/svg+xml .svg
+
+# PHP settings
+php_flag display_errors Off
+php_flag display_startup_errors Off
