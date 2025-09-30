@@ -13,8 +13,14 @@ COPY . /var/www/html/
 RUN chown -R www-data:www-data /var/www/html
 RUN chmod -R 755 /var/www/html
 
-# Expose port
-EXPOSE 80
+# Create startup script
+RUN echo '#!/bin/bash\n\
+sed -i "s/Listen 80/Listen ${PORT:-80}/g" /etc/apache2/ports.conf\n\
+sed -i "s/:80/:${PORT:-80}/g" /etc/apache2/sites-enabled/*.conf\n\
+apache2-foreground' > /start.sh && chmod +x /start.sh
 
-# Start Apache
-CMD ["apache2-foreground"]
+# Expose port
+EXPOSE ${PORT:-80}
+
+# Start Apache dengan port dynamic
+CMD ["/start.sh"]
