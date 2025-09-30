@@ -1,11 +1,20 @@
-FROM php:8.2-cli
+FROM php:8.2-apache
 
-WORKDIR /app
-
-COPY . /app
-
+# Install MySQL extensions
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 
-EXPOSE 8080
+# Enable Apache mod_rewrite
+RUN a2enmod rewrite
 
-CMD ["php", "-S", "0.0.0.0:8080", "-t", "."]
+# Copy application files
+COPY . /var/www/html/
+
+# Set permissions
+RUN chown -R www-data:www-data /var/www/html
+RUN chmod -R 755 /var/www/html
+
+# Expose port
+EXPOSE 80
+
+# Start Apache
+CMD ["apache2-foreground"]
