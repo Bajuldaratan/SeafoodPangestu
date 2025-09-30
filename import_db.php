@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS `menu` (
 -- Create Pesanan Table
 CREATE TABLE IF NOT EXISTS `pesanan` (
   `id_pesanan` int(11) NOT NULL AUTO_INCREMENT,
-  `kode_pesanan` varchar(12) NOT NULL,
+  `kode_pesanan` varchar(20) NOT NULL,
   `kode_menu` varchar(12) NOT NULL,
   `qty` int(11) NOT NULL,
   PRIMARY KEY (`id_pesanan`)
@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `pesanan` (
 -- Create Transaksi Table
 CREATE TABLE IF NOT EXISTS `transaksi` (
   `id_transaksi` int(11) NOT NULL AUTO_INCREMENT,
-  `kode_pesanan` varchar(12) NOT NULL,
+  `kode_pesanan` varchar(20) NOT NULL,
   `nama_pelanggan` varchar(50) NOT NULL,
   `waktu` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_transaksi`)
