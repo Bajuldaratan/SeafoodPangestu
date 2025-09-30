@@ -30,6 +30,7 @@ CREATE TABLE IF NOT EXISTS `pesanan` (
 CREATE TABLE IF NOT EXISTS `transaksi` (
   `id_transaksi` int(11) NOT NULL AUTO_INCREMENT,
   `kode_pesanan` varchar(20) NOT NULL,
+  `nama_pelanggan` varchar(50) NOT NULL,
   `waktu` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_transaksi`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
