@@ -146,8 +146,8 @@
                     
                     <!-- Status -->
                     <div class="mb-3">
-                        <div class="p-2 text-center" style="background: #D4EDDA; border: 2px solid #000;">
-                            <span class="fw-bold">✅ TERSEDIA</span>
+                        <div class="p-2 text-center" style="background: <?= $m['status'] == 'tersedia' ? '#D4EDDA' : '#FFE6E6'; ?>; border: 2px solid #000;">
+                            <span class="fw-bold"><?= $m['status'] == 'tersedia' ? '✅ TERSEDIA' : '❌ TIDAK TERSEDIA'; ?></span>
                         </div>
                     </div>
                     
