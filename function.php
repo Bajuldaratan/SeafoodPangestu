@@ -48,9 +48,9 @@ function register_akun()
 
 
 
-    mysqli_query($koneksi, "INSERT INTO `user`
+    mysqli_query($koneksi, "INSERT INTO `user` (username, password)
 
-                            VALUES ('', '$username', '$password')
+                            VALUES ('$username', '$password')
 
     ");
 
@@ -204,11 +204,9 @@ function tambah_data_menu()
 
     // eksekusi query insert
 
-    $id_menu = ambil_data("SELECT MAX(SUBSTR(kode_menu, 3)) AS kode FROM menu")[0]["kode"] + 1;
+    mysqli_query($koneksi, "INSERT INTO menu (kode_menu, nama, harga, gambar, kategori, status)
 
-    mysqli_query($koneksi, "INSERT INTO menu
-
-                            VALUES ($id_menu, '$kode_menu', '$nama', $harga, '$nama_gambar', '$kategori', '$status')
+                            VALUES ('$kode_menu', '$nama', $harga, '$nama_gambar', '$kategori', '$status')
 
     ");
 
@@ -399,9 +397,9 @@ function tambah_data_pesanan()
 
         $qty = $lp["qty"];
 
-        mysqli_query($koneksi, "INSERT INTO pesanan
+        mysqli_query($koneksi, "INSERT INTO pesanan (kode_pesanan, kode_menu, qty)
 
-                                VALUES ('', '$kode_pesanan', '$kode_menu', $qty);
+                                VALUES ('$kode_pesanan', '$kode_menu', $qty);
 
         ");
     }
@@ -410,9 +408,9 @@ function tambah_data_pesanan()
 
     // Tambah Data Transaksi
 
-    mysqli_query($koneksi, "INSERT INTO transaksi
+    mysqli_query($koneksi, "INSERT INTO transaksi (kode_pesanan, nama_pelanggan, waktu)
 
-                            VALUES ('', '$kode_pesanan', '$pelanggan', NOW())
+                            VALUES ('$kode_pesanan', '$pelanggan', NOW())
 
     ");
 

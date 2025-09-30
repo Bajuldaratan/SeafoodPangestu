@@ -52,11 +52,11 @@ CREATE TABLE IF NOT EXISTS `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Insert Default Admin
-INSERT IGNORE INTO `admin` (`username`, `password`) VALUES
+INSERT IGNORE INTO `admin` (username, password) VALUES
 ('admin', '" . md5('admin') . "');
 
 -- Insert Default User
-INSERT IGNORE INTO `user` (`username`, `password`) VALUES
+INSERT IGNORE INTO `user` (username, password) VALUES
 ('user', '" . md5('user') . "');
 
 -- Insert Sample Menu
