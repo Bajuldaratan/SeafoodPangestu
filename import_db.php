@@ -34,20 +34,29 @@ CREATE TABLE IF NOT EXISTS `transaksi` (
   PRIMARY KEY (`id_transaksi`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Create Users Table
-CREATE TABLE IF NOT EXISTS `users` (
-  `id_user` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(50) NOT NULL,
+-- Create Admin Table
+CREATE TABLE IF NOT EXISTS `admin` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `role` enum('admin','user') NOT NULL DEFAULT 'user',
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id_user`),
-  UNIQUE KEY `username` (`username`)
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Create User Table
+CREATE TABLE IF NOT EXISTS `user` (
+  `id_user` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`id_user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Insert Default Admin
-INSERT IGNORE INTO `users` (`username`, `password`, `role`) VALUES
-('admin', '" . md5('admin') . "', 'admin');
+INSERT IGNORE INTO `admin` (`username`, `password`) VALUES
+('admin', '" . md5('admin') . "');
+
+-- Insert Default User
+INSERT IGNORE INTO `user` (`username`, `password`) VALUES
+('user', '" . md5('user') . "');
 
 -- Insert Sample Menu
 INSERT IGNORE INTO `menu` (`kode_menu`, `nama`, `harga`, `kategori`, `gambar`) VALUES
