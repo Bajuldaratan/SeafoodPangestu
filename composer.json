@@ -3,9 +3,8 @@
   "description": "Sistem Kasir Restoran Seafood Pangestu dengan Neo-Brutalism UI",
   "type": "project",
   "require": {
-    "php": "^8.2"
-  },
-  "scripts": {
-    "start": "php -S 0.0.0.0:8000 -t ."
+    "php": "^8.2",
+    "ext-mysqli": "*",
+    "ext-pdo": "*"
   }
 }
