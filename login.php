@@ -1,19 +1,26 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 session_start();
 require_once "function.php";
+
 if (isset($_POST["login"])) {
     $login = login_akun();
 } else if (isset($_POST["register"])) {
     $register = register_akun();
-    echo $register > 0
-        ? "<script>
-            alert('Berhasil Registrasi!');
-            location.href = 'login.php';
-        </script>"
-        : "<script>
-            alert('Gagal Registrasi!');
-            location.href = 'login.php';
+    
+    if ($register > 0) {
+        echo "<script>
+            alert('Berhasil Registrasi! Silakan login.');
+            window.location.href = 'login.php';
         </script>";
+    } else {
+        echo "<script>
+            alert('Gagal Registrasi! Silakan coba lagi.');
+            window.location.href = 'login.php';
+        </script>";
+    }
 }
 ?>
 <!DOCTYPE html>
