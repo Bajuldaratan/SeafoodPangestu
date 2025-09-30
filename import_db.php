@@ -12,6 +12,7 @@ CREATE TABLE IF NOT EXISTS `menu` (
   `harga` int(11) NOT NULL,
   `kategori` varchar(50) NOT NULL,
   `gambar` varchar(255) NOT NULL,
+  `status` varchar(20) DEFAULT 'tersedia',
   PRIMARY KEY (`id_menu`),
   UNIQUE KEY `kode_menu` (`kode_menu`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
